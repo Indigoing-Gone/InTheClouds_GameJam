@@ -13,5 +13,23 @@ MonoBehaviour:
   m_Name: House
   m_EditorClassIdentifier: Assembly-CSharp::SkyPattern
   cloudPatternName: House
-  cloudPattern: 
+  cloudPattern: '~~~~~~~~~~
+
+    ~~~~~~~~~~
+
+    ~~~~~~~~~~
+
+    ~~~~~~~~~~
+
+    ~~~~~~~~~~
+
+    ~~~~~~~~~~
+
+    ~~~~~~~~~~
+
+    ~~~~~~~~~~
+
+    ~~~~~~~~~~
+
+    ~~~~~~~~~~'
   IntendedCloudPositions: []
