@@ -20,6 +20,8 @@ public class InputReader : ScriptableObject, IPlayerActions
 
             DisableAll();
         }
+
+        SetGameplay();
     }
 
     public void SetGameplay()
@@ -35,7 +37,7 @@ public class InputReader : ScriptableObject, IPlayerActions
 
     #region Events
 
-    //Gameplau
+    //Gameplay
     public event Action<Vector2> PositionEvent;
     public event Action<bool> DragEvent;
 
@@ -43,13 +45,13 @@ public class InputReader : ScriptableObject, IPlayerActions
 
     #region Triggers
 
-    //Mouse Position
+    //Drag Position
     public void OnPosition(InputAction.CallbackContext context)
     {
         PositionEvent?.Invoke(Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>()));
     }
 
-    //Drag
+    //Drag Pressed
     public void OnDrag(InputAction.CallbackContext context)
     {
         if (context.phase == InputActionPhase.Performed) DragEvent?.Invoke(true);

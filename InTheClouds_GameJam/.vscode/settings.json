@@ -67,5 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "InTheClouds_GameJam.slnx"
+    "dotnet.defaultSolution": "InTheClouds_GameJam.slnx",
+    "editor.codeLens": false
 }
