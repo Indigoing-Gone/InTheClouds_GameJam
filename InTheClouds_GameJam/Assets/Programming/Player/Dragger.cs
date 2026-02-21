@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class Dragger : MonoBehaviour
 {
+    [Header("Components")]
     [SerializeField] private PlayerInput playerInput;
 
+    [Header("Dragging Parameters")]
     private Draggable currentDraggable = null;
     [SerializeField] private LayerMask draggableLayers;
     private Vector3 dragOffset;
