@@ -1,14 +1,17 @@
 using System.Linq;
 using UnityEngine;
 
+public class CellData
+{
+    public Vector2 cellCenter;
+    public bool cloudDetected;
+    public bool cloudIntended;
+}
+
 public class SkyGrid : MonoBehaviour
 {
-    private class CellData
-    {
-        public Vector2 cellCenter;
-        public bool cloudDetected;
-        public bool cloudIntended;
-    }
+    [Header("Components")]
+    private SkyGridVisuals skyGridVisuals;
 
     [Header("Grid Parameters")]
     [SerializeField] private Vector2Int gridSize;
@@ -29,8 +32,12 @@ public class SkyGrid : MonoBehaviour
 
     private void Awake()
     {
+        skyGridVisuals = GetComponent<SkyGridVisuals>();
+
         GenerateSkyGrid();
         UpdateIntendedCloudsSkyGrid();
+
+        skyGridVisuals.GenerateSkyGridCells(skyGrid);
     }
 
     private void Update()
