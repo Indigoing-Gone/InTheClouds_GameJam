@@ -1076,9 +1076,14 @@ MonoBehaviour:
   roundVisuals: {fileID: 1033121998}
   scoreManager: {fileID: 1839212352}
   skyPatterns:
-  - {fileID: 11400000, guid: 77686d93783a7724f8a72f8ce798b4ac, type: 2}
+  - {fileID: 11400000, guid: 3984e8c31963c8c409615700f4ee9f04, type: 2}
+  - {fileID: 11400000, guid: a8bb3dd1c1c0805428e14d2d9f18c001, type: 2}
+  - {fileID: 11400000, guid: b6fa17c638be1004bbeca525bf93cf01, type: 2}
   - {fileID: 11400000, guid: 98b5e6c113a1b214baf8180b766c7a5a, type: 2}
+  - {fileID: 11400000, guid: 77686d93783a7724f8a72f8ce798b4ac, type: 2}
+  - {fileID: 11400000, guid: 30af0a9792f40664fac033cb9ae4025f, type: 2}
   - {fileID: 11400000, guid: c7b301c4a12a57b44b134123906a7c41, type: 2}
+  - {fileID: 11400000, guid: 86fc48510de326542a39e4cf91f81671, type: 2}
   skyGrids:
   - {fileID: 1120059781}
   totalRoundCount: 3
