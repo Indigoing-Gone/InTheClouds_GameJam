@@ -12,9 +12,10 @@ public class SkyPattern : ScriptableObject
     {
         IntendedCloudPositions.Clear();
         string[] _pattern = cloudPattern.Split("\n");
+        int _patternHeight = _pattern.Length - 1;
 
-        for(int y = _pattern.Length - 1; y >= 0; y--)
+        for(int y = 0; y < _pattern.Length; y++)
             for(int x = 0; x < _pattern[y].Length; x++)
-                if(_pattern[y][x] == 'X') IntendedCloudPositions.Add(new(x,y));
+                if(_pattern[y][x] == 'X') IntendedCloudPositions.Add(new(x, _patternHeight - y));
     }
 }

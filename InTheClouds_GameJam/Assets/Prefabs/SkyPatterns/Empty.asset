@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Empty
   m_EditorClassIdentifier: Assembly-CSharp::SkyPattern
   cloudPatternName: Empty
+  cloudPattern: 
   IntendedCloudPositions: []
