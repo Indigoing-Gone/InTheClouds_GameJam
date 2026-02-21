@@ -327,7 +327,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -583,8 +583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1969f7f459bca59db96a0b182a9efa3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkyGrid
-  gridSize: {x: 5, y: 5}
-  cellSize: {x: 1.5, y: 1.5}
+  gridSize: {x: 10, y: 10}
+  cellSize: {x: 1.2, y: 1.2}
   validationKey: {fileID: 11400000, guid: 056199dbdcb2246ed994473d275ff19e, type: 2}
 --- !u!4 &1120059782
 Transform:
@@ -595,7 +595,7 @@ Transform:
   m_GameObject: {fileID: 1120059780}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.56, y: -3.74, z: 0}
+  m_LocalPosition: {x: -5.61, y: -5.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
