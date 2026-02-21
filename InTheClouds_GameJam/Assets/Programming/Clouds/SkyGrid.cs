@@ -17,7 +17,7 @@ public class SkyGrid : MonoBehaviour
 
     [Header("Validation Parameters")]
     [SerializeField] private SkyPattern validationPattern;
-    public SkyPattern ValidationKey
+    public SkyPattern ValidationPattern
     {
         get => validationPattern;
         set
@@ -27,13 +27,13 @@ public class SkyGrid : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Awake()
     {
         GenerateSkyGrid();
         UpdateIntendedCloudsSkyGrid();
     }
 
-    void Update()
+    private void Update()
     {
         DetectCloudsOnSkyGrid();
     }
@@ -84,9 +84,11 @@ public class SkyGrid : MonoBehaviour
             for (int y = 0; y < gridSize.y; y++)
                 skyGrid[x, y].cloudIntended = false;
 
-        for (int i = 0; i < ValidationKey.IntendedCloudPositions.Length; i++)
+        if(ValidationPattern == null) return;
+
+        for (int i = 0; i < ValidationPattern.IntendedCloudPositions.Length; i++)
         {
-            Vector2Int _cloudPosition = ValidationKey.IntendedCloudPositions[i];
+            Vector2Int _cloudPosition = ValidationPattern.IntendedCloudPositions[i];
             skyGrid[_cloudPosition.x, _cloudPosition.y].cloudIntended = true;
         }
     }

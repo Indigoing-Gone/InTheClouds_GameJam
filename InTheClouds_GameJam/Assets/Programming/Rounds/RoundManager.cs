@@ -1,36 +1,50 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering.LookDev;
-using UnityEngine.UIElements;
 
 public class RoundManager : MonoBehaviour
 {
-    [SerializeField] private List<SkyPattern> SkyPatterns;
-    [SerializeField] SkyGrid[] SkyGrids;
-    public int roundCount;
-    
+    [Header("Components")]
+    [SerializeField] private RoundVisuals roundVisuals;
+    [SerializeField] private ScoreManager scoreManager;
 
-    void Start()
+    [Header("Sky Elements")]
+    [SerializeField] private List<SkyPattern> skyPatterns;
+    [SerializeField] private SkyGrid[] skyGrids;
+
+    [Header("Round")]
+    [SerializeField] private int totalRoundCount;
+    private int currentRoundCount = 0;
+
+    void OnEnable()
     {
-        //updateGrids();
-        roundCount = 1;
+        scoreManager.ScoringEnded += RoundEnd;
     }
 
-    public void roundEnd()
+    void OnDisable()
     {
-        roundCount++;
-        
-        updateGrids();
+        scoreManager.ScoringEnded -= RoundEnd;
+    }
+
+    void Awake()
+    {
+        roundVisuals = GetComponent<RoundVisuals>();
+        roundVisuals.UpdateRoundCount(currentRoundCount, totalRoundCount);
+    }
+
+    public void RoundEnd()
+    {
+        currentRoundCount++;
+        roundVisuals.UpdateRoundCount(currentRoundCount, totalRoundCount);
+        UpdateGrids();
     }
     
-    private void updateGrids()
+    private void UpdateGrids()
     {
-        for (int i=0; i < SkyGrids.Length; i++)
+        for (int i=0; i < skyGrids.Length; i++)
         {
-            int patternIndex = Random.Range(0, SkyPatterns.Count);
-            SkyGrids[i].GetComponent<SkyGrid>().ValidationKey = SkyPatterns[patternIndex];
-            SkyPatterns.RemoveAt(patternIndex);
+            int patternIndex = Random.Range(0, skyPatterns.Count);
+            skyGrids[i].GetComponent<SkyGrid>().ValidationPattern = skyPatterns[patternIndex];
+            skyPatterns.RemoveAt(patternIndex);
         }
     }
 }

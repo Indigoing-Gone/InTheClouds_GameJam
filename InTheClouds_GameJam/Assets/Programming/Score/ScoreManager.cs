@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(ScoreVisuals))]
 public class ScoreManager : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField] private ScoreVisuals visuals;
+    [SerializeField] private ScoreVisuals scoreVisuals;
     [SerializeField] private SkyGrid[] skyGrids;
     [SerializeField] private ConfirmButton confirmButton;
 
@@ -13,19 +14,23 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private int correctPoints;
     [SerializeField] private int incorrectPoints;
 
+    public event Action ScoringEnded;
+
+
     private void OnEnable()
     {
-        //confirmButton.NextRoundStarting += ScoreGrids;
+        confirmButton.ScoringStarted += ScoreGrids;
     }
 
     private void OnDisable()
     {
-        //confirmButton.NextRoundStarting -= ScoreGrids;
+        confirmButton.ScoringStarted -= ScoreGrids;
     }
 
     void Awake()
     {
-        visuals = GetComponent<ScoreVisuals>();
+        scoreVisuals = GetComponent<ScoreVisuals>();
+        scoreVisuals.UpdateTotalScore(totalScore);
     }
 
     private void ScoreGrids()
@@ -35,8 +40,10 @@ public class ScoreManager : MonoBehaviour
         {
             (_correct, _incorrect) = skyGrids[i].ValidateSkyGrid();
             CalculatePoints(_correct, _incorrect);
-            visuals.UpdateTotalScore(totalScore);
+            scoreVisuals.UpdateTotalScore(totalScore);
         }
+
+        ScoringEnded?.Invoke();
     }
 
     private void CalculatePoints(int _correct, int _incorrect)

@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class ConfirmButton : MonoBehaviour
 {
-    public event Action NextRoundStarting;
+    public event Action ScoringStarted;
 
     public void ConfirmButtonPressed()
     {
-        NextRoundStarting?.Invoke();
+        ScoringStarted?.Invoke();
     }
 }
