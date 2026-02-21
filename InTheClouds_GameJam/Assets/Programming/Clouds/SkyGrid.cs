@@ -86,7 +86,7 @@ public class SkyGrid : MonoBehaviour
 
         if(ValidationPattern == null) return;
 
-        for (int i = 0; i < ValidationPattern.IntendedCloudPositions.Length; i++)
+        for (int i = 0; i < ValidationPattern.IntendedCloudPositions.Count; i++)
         {
             Vector2Int _cloudPosition = ValidationPattern.IntendedCloudPositions[i];
             skyGrid[_cloudPosition.x, _cloudPosition.y].cloudIntended = true;
