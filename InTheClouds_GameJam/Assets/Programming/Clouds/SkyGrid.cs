@@ -139,7 +139,7 @@ public class SkyGrid : MonoBehaviour
                         ? Color.blue
                         : Color.black;
                 }
-                Gizmos.DrawSphere(_start, 0.15f);
+                Gizmos.DrawSphere(_start, cellSize.x / 2);
             }
         }
     }
