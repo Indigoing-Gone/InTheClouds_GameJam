@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed79a4b3fcf5913ad992abc5754c9455, type: 3}
-  m_Name: empty
+  m_Name: Empty
   m_EditorClassIdentifier: Assembly-CSharp::SkyPattern
   cloudPatternName: Empty
   IntendedCloudPositions: []
