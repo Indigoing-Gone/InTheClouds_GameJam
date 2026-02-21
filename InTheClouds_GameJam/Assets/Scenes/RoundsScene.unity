@@ -128,6 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 327224801}
+  - component: {fileID: 327224802}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -150,6 +151,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1103191262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &327224802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327224800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9a87468c241324bb39af75d8f05514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoundManager
+  SkyPatterns:
+  - {fileID: 11400000, guid: d18c1dbd17c214246a4b98ee2732c0ac, type: 2}
+  - {fileID: 11400000, guid: 9b9434e8e8f04b9459e947e3d6ed6cdc, type: 2}
+  - {fileID: 11400000, guid: 3eba2604c7f950d4b998ba5b57256e23, type: 2}
+  - {fileID: 11400000, guid: c7b301c4a12a57b44b134123906a7c41, type: 2}
+  - {fileID: 11400000, guid: 77686d93783a7724f8a72f8ce798b4ac, type: 2}
+  SkyGrids:
+  - {fileID: 1120059781}
+  roundCount: 0
 --- !u!1 &392788517
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkyGrid
   gridSize: {x: 10, y: 10}
   cellSize: {x: 1.2, y: 1.2}
-  validationPattern: {fileID: 0}
+  validationPattern: {fileID: 11400000, guid: 96817d85b6b072a4f9ae294b0bd6d4b3, type: 2}
 --- !u!4 &1120059782
 Transform:
   m_ObjectHideFlags: 0
@@ -1133,9 +1155,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077736812}
-        m_TargetAssemblyTypeName: ConfirmButton, Assembly-CSharp
-        m_MethodName: ConfirmButtonPressed
+      - m_Target: {fileID: 327224802}
+        m_TargetAssemblyTypeName: RoundManager, Assembly-CSharp
+        m_MethodName: roundEnd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
