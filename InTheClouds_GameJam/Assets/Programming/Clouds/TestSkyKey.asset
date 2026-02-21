@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed79a4b3fcf5913ad992abc5754c9455, type: 3}
   m_Name: TestSkyKey
   m_EditorClassIdentifier: Assembly-CSharp::SkyKey
+  cloudPatternName: Test
   IntendedCloudPositions:
   - {x: 1, y: 2}
   - {x: 2, y: 2}

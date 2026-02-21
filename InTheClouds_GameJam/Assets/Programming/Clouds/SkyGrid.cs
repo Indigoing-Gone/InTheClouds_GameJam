@@ -16,13 +16,13 @@ public class SkyGrid : MonoBehaviour
     private CellData[,] skyGrid;
 
     [Header("Validation Parameters")]
-    [SerializeField] private SkyKey validationKey;
-    public SkyKey ValidationKey
+    [SerializeField] private SkyPattern validationPattern;
+    public SkyPattern ValidationKey
     {
-        get => validationKey;
-        private set
+        get => validationPattern;
+        set
         {
-            validationKey = value;
+            validationPattern = value;
             UpdateIntendedCloudsSkyGrid();
         }
     }
@@ -91,7 +91,7 @@ public class SkyGrid : MonoBehaviour
         }
     }
 
-    private (int, int) ValidateSkyGrid()
+    public (int, int) ValidateSkyGrid()
     {
         int correct = 0, incorrect = 0;
         
@@ -106,11 +106,6 @@ public class SkyGrid : MonoBehaviour
         }
 
         return (correct, incorrect);     
-    }
-
-    public void PressValidate()
-    {
-        Debug.Log(ValidateSkyGrid());
     }
 
     private Vector3 GetScaledGridPosition(int _gridX, int _gridY)
