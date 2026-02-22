@@ -1,51 +1,15 @@
 using UnityEngine;
 
-public class CellData
-{
-    private Vector2 cellCenter;
-    private SkyGridCellVisual cellVisual;
-    private bool cloudDetected;
-    private bool cloudIntended;
-
-    public Vector2 CellCenter { get => cellCenter; }
-    public bool CloudDetected
-    {
-        get => cloudDetected;
-        set
-        {
-            cloudDetected = value;
-            cellVisual.UpdateOverlayVisual(cloudDetected);
-        }
-    }
-    public bool CloudIntended
-    {
-        get => cloudIntended;
-        set
-        {
-            cloudIntended = value;
-            cellVisual.UpdatePatternVisual(cloudIntended);
-        }
-    }
-
-
-    public CellData(Vector2 _cellCenter, SkyGridCellVisual _cellVisual, Vector2 _cellSize)
-    {
-        cellCenter = _cellCenter;
-        cellVisual = _cellVisual;
-        cloudDetected = false;
-        cloudIntended = false;
-
-        cellVisual.InitializeCell(cellCenter, _cellSize);
-    } 
-}
-
 public class SkyGrid : MonoBehaviour
 {
+    [Header("Components")]
+    private SkyGridVisual skyGridVisual;
+
     [Header("Grid Parameters")]
     [SerializeField] private Vector2Int gridSize;
     [SerializeField] private Vector2 cellSize;
     [SerializeField] private GameObject cellVisualObject;
-    private CellData[,] skyGrid;
+    private SkyGridCell[,] skyGrid;
 
     [Header("Validation Parameters")]
     [SerializeField] private SkyPattern validationPattern;
@@ -55,12 +19,18 @@ public class SkyGrid : MonoBehaviour
         set
         {
             validationPattern = value;
+
+            if (ValidationPattern == null) return;
+
             UpdateIntendedCloudsSkyGrid();
+            skyGridVisual.UpdatePatternText(validationPattern.cloudPatternName);
         }
     }
 
     private void Awake()
     {
+        skyGridVisual = GetComponent<SkyGridVisual>();
+
         GenerateSkyGrid();
         UpdateIntendedCloudsSkyGrid();
     }
@@ -72,14 +42,14 @@ public class SkyGrid : MonoBehaviour
 
     private void GenerateSkyGrid()
     {
-        skyGrid = new CellData[gridSize.x, gridSize.y];
+        skyGrid = new SkyGridCell[gridSize.x, gridSize.y];
 
         for (int x = 0; x < gridSize.x; x++)
         {
             for (int y = 0; y < gridSize.y; y++)
             {
-                SkyGridCellVisual _cellVisual = Instantiate(cellVisualObject, Vector3.zero, Quaternion.identity).GetComponent<SkyGridCellVisual>();
-                skyGrid[x, y] = new CellData(
+                SkyGridCellVisual _cellVisual = Instantiate(cellVisualObject, transform).GetComponent<SkyGridCellVisual>();
+                skyGrid[x, y] = new SkyGridCell(
                     transform.position + GetScaledGridPosition(x, y),
                     _cellVisual,
                     cellSize
@@ -116,8 +86,6 @@ public class SkyGrid : MonoBehaviour
             for (int y = 0; y < gridSize.y; y++)
                 skyGrid[x, y].CloudIntended = false;
 
-        if(ValidationPattern == null) return;
-
         for (int i = 0; i < ValidationPattern.IntendedCloudPositions.Count; i++)
         {
             
@@ -148,6 +116,7 @@ public class SkyGrid : MonoBehaviour
         return Vector3.Scale(new(_gridX, _gridY), cellSize);
     }
 
+    /*
     private void OnDrawGizmos()
     {
         for (int x = 0; x < gridSize.x; x++)
@@ -157,11 +126,11 @@ public class SkyGrid : MonoBehaviour
                 Gizmos.color = Color.black;
                 Vector3 _start = transform.position + GetScaledGridPosition(x, y);
 
-                // Vector3 _end = transform.position + GetScaledGridPosition(x + 1, y);
-                // Gizmos.DrawLine(_start, _end);
+                Vector3 _end = transform.position + GetScaledGridPosition(x + 1, y);
+                Gizmos.DrawLine(_start, _end);
 
-                // _end = transform.position + GetScaledGridPosition(x, y + 1);
-                // Gizmos.DrawLine(_start, _end);
+                _end = transform.position + GetScaledGridPosition(x, y + 1);
+                Gizmos.DrawLine(_start, _end);
 
                 if(Application.isPlaying)
                 {
@@ -176,4 +145,5 @@ public class SkyGrid : MonoBehaviour
             }
         }
     }
+    */
 }

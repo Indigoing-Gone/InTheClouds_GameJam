@@ -7,7 +7,7 @@ public class ScoreManager : MonoBehaviour
     [Header("Components")]
     [SerializeField] private ScoreVisuals scoreVisuals;
     [SerializeField] private SkyGrid[] skyGrids;
-    [SerializeField] private ConfirmButton confirmButton;
+    [SerializeField] private Buttons buttons;
 
     [Header("Scoring")]
     [SerializeField] private int totalScore;
@@ -19,12 +19,12 @@ public class ScoreManager : MonoBehaviour
 
     private void OnEnable()
     {
-        confirmButton.ScoringStarted += ScoreGrids;
+        buttons.ScoringStarted += ScoreGrids;
     }
 
     private void OnDisable()
     {
-        confirmButton.ScoringStarted -= ScoreGrids;
+        buttons.ScoringStarted -= ScoreGrids;
     }
 
     void Awake()
