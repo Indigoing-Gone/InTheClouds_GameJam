@@ -12,5 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6e75d48681bb0e79046a55602201ce, type: 3}
   m_Name: MediumClouds
   m_EditorClassIdentifier: Assembly-CSharp::CloudSet
-  clouds: []
+  clouds:
+  - {fileID: 4018956412020243838, guid: 1fb72f8384501c594b756f2539dac5ef, type: 3}
+  - {fileID: 5439552924471564870, guid: 8f9bb3bb0eb6bdecfa1d36173906ea6c, type: 3}
+  - {fileID: 2776651393985370481, guid: 5a7cd70eeb435f75eabdd72932820ce8, type: 3}
+  - {fileID: 2776651393985370481, guid: c3cf7c9e29becf32d8d3540773bb51bd, type: 3}
+  - {fileID: 2776651393985370481, guid: 5893f70db643cb3ec81799358cd3baef, type: 3}
+  - {fileID: 2776651393985370481, guid: 87e2a2081a9d56e0387792de62d46039, type: 3}
+  - {fileID: 2776651393985370481, guid: 1e92eada4af960cb4893f3bd6e14abc5, type: 3}
+  - {fileID: 2776651393985370481, guid: b1de816e44d585e47a2f8b78834156c8, type: 3}
+  - {fileID: 2776651393985370481, guid: b6f9748139135f345993afef2fa482f4, type: 3}
+  - {fileID: 2776651393985370481, guid: 8d9f94818660aa64db90eeaf1b644557, type: 3}
+  - {fileID: 2776651393985370481, guid: 51415fddcc57e384ab51426146be7e48, type: 3}
   AmountToSelect: 4

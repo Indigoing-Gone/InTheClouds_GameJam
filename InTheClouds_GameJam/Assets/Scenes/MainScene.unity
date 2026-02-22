@@ -1683,8 +1683,9 @@ MonoBehaviour:
   - {fileID: 1109394522}
   - {fileID: 1005997316}
   cloudSets:
-  - {fileID: 11400000, guid: b449e3b55c09631f7acc3edf2ce28c15, type: 2}
   - {fileID: 11400000, guid: cddc64991b20719788446effc0964374, type: 2}
+  - {fileID: 11400000, guid: 37bbd822e58a3364d9e61397514946f8, type: 2}
+  - {fileID: 11400000, guid: b449e3b55c09631f7acc3edf2ce28c15, type: 2}
   currentClouds: []
   totalRoundCount: 5
   endPanel: {fileID: 1136255910}
