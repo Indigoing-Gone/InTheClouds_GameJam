@@ -17,6 +17,6 @@ public class ScoreVisuals : MonoBehaviour
     public void GenerateScorePopup(Vector3 _position, string _text)
     {
         PopupText _popupText = Instantiate(popupTextObject, _position, Quaternion.identity).GetComponent<PopupText>();
-        _popupText.SetText($"+{_text}");
+        _popupText.SetText(_text);
     }
 }
