@@ -292,10 +292,12 @@ MonoBehaviour:
   m_text: 'Three cloud gazers tell you what they see. Attempt to recreate these images
     by clicking and dragging clouds into the sky to overlay the images.
 
-    You
-    get more points the more accurate the images you create with clouds are to the
-    images the observers see. Press Continue to get points based on your accuracy
-    and move onto the next round.'
+    Press
+    Confirm to get points based on your accuracy and move onto the next round.
+
+    Each
+    space on an image you cover grants points. You lose points for each space on
+    an image you miss and each space you cover that is not part of an image.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaf71ecae057d0441ab01c60a9595bce, type: 2}
   m_sharedMaterial: {fileID: -291740260715509818, guid: aaf71ecae057d0441ab01c60a9595bce, type: 2}
@@ -495,6 +497,83 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Buttons
   startPanel: {fileID: 854189121}
   RoundManager: {fileID: 1033121997}
+--- !u!1001 &395475945
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1459370487}
+    m_Modifications:
+    - target: {fileID: 3506820962291245345, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_Name
+      value: SkyGrid2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020992100799670190, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: patternText
+      value: 
+      objectReference: {fileID: 1309207149}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+--- !u!4 &395475946 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+  m_PrefabInstance: {fileID: 395475945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &395475947 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2606843815296264558, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+  m_PrefabInstance: {fileID: 395475945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969f7f459bca59db96a0b182a9efa3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkyGrid
 --- !u!1 &430360123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,69 +1631,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854189121}
   m_CullTransparentMesh: 1
---- !u!1 &1005997313
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1005997314}
-  - component: {fileID: 1005997316}
-  - component: {fileID: 1005997315}
-  m_Layer: 0
-  m_Name: SkyGrid3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1005997314
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005997313}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.799999, y: 2.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1459370487}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1005997315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005997313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 706c4f7811f4e2287ab7ec91ff65edc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SkyGridVisual
-  patternTextHead: I see a...
-  patternText: {fileID: 1498173449}
---- !u!114 &1005997316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005997313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1969f7f459bca59db96a0b182a9efa3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SkyGrid
-  gridSize: {x: 10, y: 10}
-  cellSize: {x: 0.9, y: 0.9}
-  cellVisualObject: {fileID: 1165363105251223945, guid: 13175b8e6c44374b7bda4eea00fc13fd, type: 3}
-  validationPattern: {fileID: 11400000, guid: 96817d85b6b072a4f9ae294b0bd6d4b3, type: 2}
 --- !u!1 &1033121995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,8 +1721,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0924c21f09130a04f8d001dac284dce6, type: 2}
   skyGrids:
   - {fileID: 1120059781}
-  - {fileID: 1109394522}
-  - {fileID: 1005997316}
+  - {fileID: 395475947}
+  - {fileID: 2083266263}
   cloudSets:
   - {fileID: 11400000, guid: cddc64991b20719788446effc0964374, type: 2}
   - {fileID: 11400000, guid: 37bbd822e58a3364d9e61397514946f8, type: 2}
@@ -2037,132 +2053,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107074874}
   m_CullTransparentMesh: 1
---- !u!1 &1109394519
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1109394520}
-  - component: {fileID: 1109394522}
-  - component: {fileID: 1109394521}
-  m_Layer: 0
-  m_Name: SkyGrid2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1109394520
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109394519}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1459370487}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1109394521
+--- !u!114 &1120059781 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2606843815296264558, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+  m_PrefabInstance: {fileID: 1159538488639747349}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109394519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 706c4f7811f4e2287ab7ec91ff65edc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SkyGridVisual
-  patternTextHead: I see a...
-  patternText: {fileID: 1309207149}
---- !u!114 &1109394522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109394519}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1969f7f459bca59db96a0b182a9efa3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkyGrid
-  gridSize: {x: 10, y: 10}
-  cellSize: {x: 0.9, y: 0.9}
-  cellVisualObject: {fileID: 1165363105251223945, guid: 13175b8e6c44374b7bda4eea00fc13fd, type: 3}
-  validationPattern: {fileID: 11400000, guid: 96817d85b6b072a4f9ae294b0bd6d4b3, type: 2}
---- !u!1 &1120059780
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1120059782}
-  - component: {fileID: 1120059781}
-  - component: {fileID: 1120059783}
-  m_Layer: 0
-  m_Name: SkyGrid1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1120059781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120059780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1969f7f459bca59db96a0b182a9efa3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SkyGrid
-  gridSize: {x: 10, y: 10}
-  cellSize: {x: 0.9, y: 0.9}
-  cellVisualObject: {fileID: 1165363105251223945, guid: 13175b8e6c44374b7bda4eea00fc13fd, type: 3}
-  validationPattern: {fileID: 11400000, guid: 96817d85b6b072a4f9ae294b0bd6d4b3, type: 2}
---- !u!4 &1120059782
+--- !u!4 &1120059782 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+  m_PrefabInstance: {fileID: 1159538488639747349}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120059780}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.799999, y: 2.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1459370487}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1120059783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120059780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 706c4f7811f4e2287ab7ec91ff65edc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SkyGridVisual
-  patternTextHead: I see a...
-  patternText: {fileID: 1750668044}
 --- !u!1 &1136255910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2819,8 +2725,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1120059782}
-  - {fileID: 1109394520}
-  - {fileID: 1005997314}
+  - {fileID: 395475946}
+  - {fileID: 2083266262}
   m_Father: {fileID: 1572792118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1498173447
@@ -3504,8 +3410,8 @@ MonoBehaviour:
   scoreVisuals: {fileID: 1839212351}
   skyGrids:
   - {fileID: 1120059781}
-  - {fileID: 1109394522}
-  - {fileID: 1005997316}
+  - {fileID: 395475947}
+  - {fileID: 2083266263}
   buttons: {fileID: 392788522}
   totalScore: 0
   scoreCurve:
@@ -3731,6 +3637,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077736807}
   m_CullTransparentMesh: 1
+--- !u!1001 &2083266261
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1459370487}
+    m_Modifications:
+    - target: {fileID: 3506820962291245345, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_Name
+      value: SkyGrid3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020992100799670190, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: patternText
+      value: 
+      objectReference: {fileID: 1498173449}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.799999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+--- !u!4 &2083266262 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+  m_PrefabInstance: {fileID: 2083266261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2083266263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2606843815296264558, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+  m_PrefabInstance: {fileID: 2083266261}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969f7f459bca59db96a0b182a9efa3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkyGrid
 --- !u!1 &2101159823
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,6 +3847,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101159823}
   m_CullTransparentMesh: 1
+--- !u!1001 &1159538488639747349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1459370487}
+    m_Modifications:
+    - target: {fileID: 3506820962291245345, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_Name
+      value: SkyGrid1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020992100799670190, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: patternText
+      value: 
+      objectReference: {fileID: 1750668044}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.799999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712247391156840322, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8872bb6957ec4c3a1802fc3021e18e4c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

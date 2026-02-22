@@ -38,16 +38,19 @@ public class ScoreManager : MonoBehaviour
         for (int i = 0; i < skyGrids.Length; i++)
         {
             (_correct, _incorrect) = skyGrids[i].ValidateSkyGrid();
-            CalculatePoints(_correct, _incorrect);
+            int _addedScore = CalculatePoints(_correct, _incorrect);
+            scoreVisuals.GenerateScorePopup(skyGrids[i].transform.position, _addedScore.ToString());
             scoreVisuals.UpdateTotalScore(totalScore);
         }
 
         ScoringEnded?.Invoke();
     }
 
-    private void CalculatePoints(float _correct, float _incorrect)
+    private int CalculatePoints(float _correct, float _incorrect)
     {
         float _accuracy = _correct / (_correct + _incorrect);
-        totalScore += Mathf.Max(0, Mathf.CeilToInt(scoreCurve.Evaluate(_accuracy)));
+        int _addedScore = Mathf.Max(0, Mathf.CeilToInt(scoreCurve.Evaluate(_accuracy)));
+        totalScore += _addedScore;
+        return _addedScore;
     }
 }
