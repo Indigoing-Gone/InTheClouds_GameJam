@@ -4,18 +4,27 @@ using UnityEngine;
 public class CellData
 {
     public Vector2 cellCenter;
+    public SkyGridCellVisual cellVisual;
     public bool cloudDetected;
     public bool cloudIntended;
+
+    public CellData(Vector2 _cellCenter, SkyGridCellVisual _cellVisual, Vector2 _cellSize)
+    {
+        cellCenter = _cellCenter;
+        cellVisual = _cellVisual;
+        cloudDetected = false;
+        cloudIntended = false;
+
+        cellVisual.InitializeCell(cellCenter, _cellSize);
+    } 
 }
 
 public class SkyGrid : MonoBehaviour
 {
-    [Header("Components")]
-    private SkyGridVisuals skyGridVisuals;
-
     [Header("Grid Parameters")]
     [SerializeField] private Vector2Int gridSize;
     [SerializeField] private Vector2 cellSize;
+    [SerializeField] private GameObject cellVisualObject;
     private CellData[,] skyGrid;
 
     [Header("Validation Parameters")]
@@ -32,12 +41,8 @@ public class SkyGrid : MonoBehaviour
 
     private void Awake()
     {
-        skyGridVisuals = GetComponent<SkyGridVisuals>();
-
         GenerateSkyGrid();
         UpdateIntendedCloudsSkyGrid();
-
-        skyGridVisuals.GenerateSkyGridCells(skyGrid);
     }
 
     private void Update()
@@ -53,12 +58,12 @@ public class SkyGrid : MonoBehaviour
         {
             for (int y = 0; y < gridSize.y; y++)
             {
-                skyGrid[x, y] = new CellData
-                {
-                    cellCenter = transform.position + GetScaledGridPosition(x, y),
-                    cloudDetected = false,
-                    cloudIntended = false,
-                };
+                SkyGridCellVisual _cellVisual = Instantiate(cellVisualObject, Vector3.zero, Quaternion.identity).GetComponent<SkyGridCellVisual>();
+                skyGrid[x, y] = new CellData(
+                    transform.position + GetScaledGridPosition(x, y),
+                    _cellVisual,
+                    cellSize
+                );
             }
         }
     }
@@ -95,6 +100,7 @@ public class SkyGrid : MonoBehaviour
 
         for (int i = 0; i < ValidationPattern.IntendedCloudPositions.Count; i++)
         {
+            
             Vector2Int _cloudPosition = ValidationPattern.IntendedCloudPositions[i];
             skyGrid[_cloudPosition.x, _cloudPosition.y].cloudIntended = true;
         }
