@@ -24,4 +24,4 @@ MonoBehaviour:
   - {fileID: 2776651393985370481, guid: b6f9748139135f345993afef2fa482f4, type: 3}
   - {fileID: 2776651393985370481, guid: 8d9f94818660aa64db90eeaf1b644557, type: 3}
   - {fileID: 2776651393985370481, guid: 51415fddcc57e384ab51426146be7e48, type: 3}
-  AmountToSelect: 4
+  AmountToSelect: 6
