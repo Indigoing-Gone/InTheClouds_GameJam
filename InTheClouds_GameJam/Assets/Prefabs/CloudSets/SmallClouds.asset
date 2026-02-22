@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6e75d48681bb0e79046a55602201ce, type: 3}
+  m_Name: SmallClouds
+  m_EditorClassIdentifier: Assembly-CSharp::CloudSet
+  clouds:
+  - {fileID: 2104139574656102412, guid: 9d49e77a8e6ca3c7c8c6a0726791554b, type: 3}
+  - {fileID: 2776651393985370481, guid: d161690153d96954aa7de0e1d76362df, type: 3}
+  - {fileID: 2776651393985370481, guid: 2e75d6e2c4e06c344afe022e1c13d07e, type: 3}
+  - {fileID: 2776651393985370481, guid: 8b270ee710d2ce11c8fe29366948c5e6, type: 3}
+  - {fileID: 2776651393985370481, guid: 3b67af27536cbe24d91701c09cfd38ac, type: 3}
+  - {fileID: 2776651393985370481, guid: 5ca180a49c6f4ee478f29635982a78cb, type: 3}
+  - {fileID: 2776651393985370481, guid: dcd0959dc8c74a29b80ba26d9bf20bc3, type: 3}
+  - {fileID: 7080737429987107595, guid: 712cb1d0fa0e418dc83f32b4a55de073, type: 3}
+  - {fileID: 3998730951636642715, guid: 5c74147a3df43bf47aefbf4b8ab27820, type: 3}
+  AmountToSelect: 4
