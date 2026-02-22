@@ -1290,13 +1290,30 @@ MonoBehaviour:
   scoreManager: {fileID: 1839212352}
   skyPatterns:
   - {fileID: 11400000, guid: 3984e8c31963c8c409615700f4ee9f04, type: 2}
+  - {fileID: 11400000, guid: 18ff0af6a0528084a809a05a2ff28983, type: 2}
+  - {fileID: 11400000, guid: 5b72da59fb847424d8bcce6b0f7249a8, type: 2}
   - {fileID: 11400000, guid: a8bb3dd1c1c0805428e14d2d9f18c001, type: 2}
   - {fileID: 11400000, guid: b6fa17c638be1004bbeca525bf93cf01, type: 2}
+  - {fileID: 11400000, guid: 3a2d0fac730509949a8316b6ffdf6bbe, type: 2}
+  - {fileID: 11400000, guid: 35aa2189dc7855e4fb9ce0cfd91d331c, type: 2}
+  - {fileID: 11400000, guid: 3a60a0203c9363c48aa7a309c0b7ca19, type: 2}
   - {fileID: 11400000, guid: 98b5e6c113a1b214baf8180b766c7a5a, type: 2}
+  - {fileID: 11400000, guid: 1e22f94a6ffe24848961e507d9fbdcf4, type: 2}
+  - {fileID: 11400000, guid: f77eb431d4b7c084d93bccf39f0e41cb, type: 2}
+  - {fileID: 11400000, guid: 3b13fd8571c4a254dae7a61c78285657, type: 2}
   - {fileID: 11400000, guid: 77686d93783a7724f8a72f8ce798b4ac, type: 2}
   - {fileID: 11400000, guid: 30af0a9792f40664fac033cb9ae4025f, type: 2}
   - {fileID: 11400000, guid: c7b301c4a12a57b44b134123906a7c41, type: 2}
+  - {fileID: 11400000, guid: 31dc2a6424f3d5548b9972100aa4789a, type: 2}
+  - {fileID: 11400000, guid: cadd4d0e734406842abb473c2b3a56de, type: 2}
   - {fileID: 11400000, guid: 86fc48510de326542a39e4cf91f81671, type: 2}
+  - {fileID: 11400000, guid: cd6c05a3bfe0efb4e9a59ea658925e6f, type: 2}
+  - {fileID: 11400000, guid: 8f43869b03428be4cb653d1a5a9aab42, type: 2}
+  - {fileID: 11400000, guid: 9c9cdd25d03b5344ca5401f4f0b01a57, type: 2}
+  - {fileID: 11400000, guid: 831a89ae3d1c666468042f9658421489, type: 2}
+  - {fileID: 11400000, guid: 1d729424c07d372458e7e544d9813673, type: 2}
+  - {fileID: 11400000, guid: acdb6eb2487c1aa4aa5647f1569a357f, type: 2}
+  - {fileID: 11400000, guid: 0924c21f09130a04f8d001dac284dce6, type: 2}
   skyGrids:
   - {fileID: 1120059781}
   totalRoundCount: 3
