@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class PopupText : MonoBehaviour
 {
-    private TextMeshProUGUI textComponent;
+    private TextMeshPro textComponent;
     [SerializeField] private float destroyTimer = 1.5f;
     private float timer;
 
     void Awake()
     {
-        textComponent = GetComponent<TextMeshProUGUI>();
+        textComponent = GetComponent<TextMeshPro>();
         timer = destroyTimer;
     }
 

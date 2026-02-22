@@ -117,7 +117,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278245887
+    rgba: 55807
   m_fontColor: {r: 1, g: 0.8518007, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -217,3 +217,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5213996365d5adf59dbe475cf59845a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopupText
+  destroyTimer: 1.5

@@ -3395,6 +3395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScoreVisuals
   totalScoreText: {fileID: 1382147893}
   finalScoreText: {fileID: 1050739499}
+  popupTextObject: {fileID: 4316554377541602990, guid: 4038c6e3b6eef3c0c8152819476319ab, type: 3}
 --- !u!114 &1839212352
 MonoBehaviour:
   m_ObjectHideFlags: 0
