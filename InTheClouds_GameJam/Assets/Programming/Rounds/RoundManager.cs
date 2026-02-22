@@ -12,8 +12,11 @@ public class RoundManager : MonoBehaviour
     [Header("Sky Elements")]
     [SerializeField] private List<SkyPattern> skyPatterns;
     [SerializeField] private SkyGrid[] skyGrids;
+    
+    [Header("Cloud Elements")]
     [SerializeField] private CloudSet[] cloudSets;
-    [SerializeField] private List<Cloud> currentClouds;
+    [SerializeField] private Bounds cloudSpawnBounds;
+    private List<Cloud> currentClouds = new();
 
     [Header("Round")]
     [SerializeField] private int totalRoundCount;
@@ -61,7 +64,7 @@ public class RoundManager : MonoBehaviour
 
     private void UpdateClouds()
     {
-        foreach(Cloud _cloud in currentClouds) Destroy(_cloud.gameObject);
+        for (int i = 0; i < currentClouds.Count; i++) Destroy(currentClouds[i].gameObject);
 
         currentClouds.Clear();
         
@@ -70,7 +73,18 @@ public class RoundManager : MonoBehaviour
             for (int n = 0; n < cloudSets[i].AmountToSelect; n++)
             {
                 int cloudIndex = Random.Range(0, cloudSets[i].clouds.Length);
-                Cloud _newCloud = Instantiate(cloudSets[i].clouds[cloudIndex], Vector3.zero, Quaternion.identity).GetComponent<Cloud>();
+                Vector3 spawnPosition = new(
+                    Random.Range(-cloudSpawnBounds.extents.x, cloudSpawnBounds.extents.x),
+                    Random.Range(-cloudSpawnBounds.extents.y, cloudSpawnBounds.extents.y)
+                );
+                spawnPosition += cloudSpawnBounds.center;
+
+                Cloud _newCloud = Instantiate(
+                    cloudSets[i].clouds[cloudIndex],
+                    spawnPosition,
+                    Quaternion.identity
+                ).GetComponent<Cloud>();
+
                 currentClouds.Add(_newCloud);
             }
         }

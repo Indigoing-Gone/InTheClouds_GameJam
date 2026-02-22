@@ -572,6 +572,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430360123}
   m_CullTransparentMesh: 1
+--- !u!1 &468363429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468363430}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &468363430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468363429}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.05037, y: -1.91518, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481499268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,7 +1717,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cddc64991b20719788446effc0964374, type: 2}
   - {fileID: 11400000, guid: 37bbd822e58a3364d9e61397514946f8, type: 2}
   - {fileID: 11400000, guid: b449e3b55c09631f7acc3edf2ce28c15, type: 2}
-  currentClouds: []
+  cloudSpawnBounds:
+    m_Center: {x: 0, y: -5, z: 0}
+    m_Extent: {x: 14, y: 0.5, z: 0}
   totalRoundCount: 5
   endPanel: {fileID: 1136255910}
 --- !u!114 &1033121998
@@ -3804,3 +3837,4 @@ SceneRoots:
   - {fileID: 1103191262}
   - {fileID: 1572792118}
   - {fileID: 1597384781}
+  - {fileID: 468363430}
