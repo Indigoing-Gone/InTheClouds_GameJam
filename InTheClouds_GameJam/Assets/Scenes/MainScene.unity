@@ -292,12 +292,10 @@ MonoBehaviour:
   m_text: 'Three cloud gazers tell you what they see. Attempt to recreate these images
     by clicking and dragging clouds into the sky to overlay the images.
 
-    Press
-    Confirm to get points based on your accuracy and move onto the next round.
-
-    Each
-    space on an image you cover grants points. You lose points for each space on
-    an image you miss and each space you cover that is not part of an image.'
+    You
+    get more points the more accurate the images you create with clouds are to the
+    images the observers see. Press Continue to get points based on your accuracy
+    and move onto the next round.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaf71ecae057d0441ab01c60a9595bce, type: 2}
   m_sharedMaterial: {fileID: -291740260715509818, guid: aaf71ecae057d0441ab01c60a9595bce, type: 2}
@@ -1716,7 +1714,7 @@ MonoBehaviour:
   cloudSpawnBounds:
     m_Center: {x: 0, y: -5, z: 0}
     m_Extent: {x: 14, y: 0.5, z: 0}
-  totalRoundCount: 5
+  totalRoundCount: 3
   endPanel: {fileID: 1136255910}
 --- !u!114 &1033121998
 MonoBehaviour:
