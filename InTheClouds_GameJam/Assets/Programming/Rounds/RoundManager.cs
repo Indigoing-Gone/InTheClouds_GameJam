@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RoundManager : MonoBehaviour
@@ -10,6 +12,8 @@ public class RoundManager : MonoBehaviour
     [Header("Sky Elements")]
     [SerializeField] private List<SkyPattern> skyPatterns;
     [SerializeField] private SkyGrid[] skyGrids;
+    [SerializeField] private CloudSet[] cloudSets;
+    [SerializeField] private List<Cloud> currentClouds;
 
     [Header("Round")]
     [SerializeField] private int totalRoundCount;
@@ -36,20 +40,37 @@ public class RoundManager : MonoBehaviour
     public void RoundEnd()
     {
         if (currentRoundCount == totalRoundCount) endPanel.SetActive(true);
-        else {
+        else
+        {
             currentRoundCount++;
             roundVisuals.UpdateRoundCount(currentRoundCount, totalRoundCount);
-            UpdateGrids();
+            UpdateSkyGrids();
+            UpdateClouds();
         }
     }
     
-    private void UpdateGrids()
+    private void UpdateSkyGrids()
     {
-        for (int i=0; i < skyGrids.Length; i++)
+        for (int i = 0; i < skyGrids.Length; i++)
         {
             int patternIndex = Random.Range(0, skyPatterns.Count);
             skyGrids[i].GetComponent<SkyGrid>().ValidationPattern = skyPatterns[patternIndex];
             skyPatterns.RemoveAt(patternIndex);
+        }
+    }
+
+    private void UpdateClouds()
+    {
+        currentClouds.Clear();
+        
+        for (int i = 0; i < cloudSets.Length; i++)
+        {
+            for (int n = 0; n < cloudSets[i].AmountToSelect; n++)
+            {
+                int cloudIndex = Random.Range(0, cloudSets[i].clouds.Length);
+                Cloud _newCloud = Instantiate(cloudSets[i].clouds[cloudIndex], Vector3.zero, Quaternion.identity).GetComponent<Cloud>();
+                currentClouds.Add(_newCloud);
+            }
         }
     }
 }
