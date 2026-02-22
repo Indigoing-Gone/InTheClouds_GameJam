@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 287093492362555734, guid: ff0605262a33cde74aa9febdeeef620a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 287093492362555734, guid: ff0605262a33cde74aa9febdeeef620a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 287093492362555734, guid: ff0605262a33cde74aa9febdeeef620a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 287093492362555734, guid: ff0605262a33cde74aa9febdeeef620a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -54,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 9035501415928524874, guid: 2103d0490784b6946b66c55b370371dc, type: 3}
     - target: {fileID: 2770870988008902375, guid: ff0605262a33cde74aa9febdeeef620a, type: 3}
       propertyPath: m_Name
-      value: Cloud31
+      value: Cloud32
       objectReference: {fileID: 0}
     - target: {fileID: 7883863264444802580, guid: ff0605262a33cde74aa9febdeeef620a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
