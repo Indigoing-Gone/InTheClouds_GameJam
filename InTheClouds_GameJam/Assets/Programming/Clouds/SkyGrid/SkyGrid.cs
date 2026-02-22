@@ -116,7 +116,7 @@ public class SkyGrid : MonoBehaviour
         return Vector3.Scale(new(_gridX, _gridY), cellSize);
     }
 
-    /*
+    
     private void OnDrawGizmos()
     {
         for (int x = 0; x < gridSize.x; x++)
@@ -126,6 +126,7 @@ public class SkyGrid : MonoBehaviour
                 Gizmos.color = Color.black;
                 Vector3 _start = transform.position + GetScaledGridPosition(x, y);
 
+                /*
                 Vector3 _end = transform.position + GetScaledGridPosition(x + 1, y);
                 Gizmos.DrawLine(_start, _end);
 
@@ -141,9 +142,11 @@ public class SkyGrid : MonoBehaviour
                         ? Color.blue
                         : Color.black;
                 }
-                Gizmos.DrawSphere(_start, cellSize.x / 2);
+                */
+
+                Gizmos.DrawSphere(_start, cellSize.x / 5);
             }
         }
     }
-    */
+    
 }

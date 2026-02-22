@@ -216,11 +216,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: d5d7420c378b9c14590c078f4b8b106a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.068121
+      value: -13.41
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: d5d7420c378b9c14590c078f4b8b106a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8699038
+      value: -5.65
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: d5d7420c378b9c14590c078f4b8b106a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -281,11 +281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8566479950563890180, guid: 5c74147a3df43bf47aefbf4b8ab27820, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.57
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 8566479950563890180, guid: 5c74147a3df43bf47aefbf4b8ab27820, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.327449
+      value: -5.38
       objectReference: {fileID: 0}
     - target: {fileID: 8566479950563890180, guid: 5c74147a3df43bf47aefbf4b8ab27820, type: 3}
       propertyPath: m_LocalPosition.z
@@ -343,11 +343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7841917492422321614, guid: dcf98a03952bddb45a76ac9536fb5f9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.707058
+      value: -5.76
       objectReference: {fileID: 0}
     - target: {fileID: 7841917492422321614, guid: dcf98a03952bddb45a76ac9536fb5f9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.5608025
+      value: -5.21
       objectReference: {fileID: 0}
     - target: {fileID: 7841917492422321614, guid: dcf98a03952bddb45a76ac9536fb5f9d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -458,10 +458,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -603,11 +603,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: f193b8f73408e45428db056462aab1a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.563715
+      value: 4.15
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: f193b8f73408e45428db056462aab1a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0447946
+      value: -5.48
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: f193b8f73408e45428db056462aab1a9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1381,7 +1381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1499,11 +1499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: 251c03b28c41a1049a23850c191f1679, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.828345
+      value: 5.73
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: 251c03b28c41a1049a23850c191f1679, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6547732
+      value: -5.17
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: 251c03b28c41a1049a23850c191f1679, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1572,11 +1572,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: f36a1bb95a0dd784fa862d81905f9305, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.934126
+      value: -14.88
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: f36a1bb95a0dd784fa862d81905f9305, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.099769175
+      value: -4.19
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: f36a1bb95a0dd784fa862d81905f9305, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1623,6 +1623,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f36a1bb95a0dd784fa862d81905f9305, type: 3}
+--- !u!1 &1005997313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1005997314}
+  - component: {fileID: 1005997316}
+  - component: {fileID: 1005997315}
+  m_Layer: 0
+  m_Name: SkyGrid3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1005997314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005997313}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.5, y: -2.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1459370487}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1005997315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005997313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 706c4f7811f4e2287ab7ec91ff65edc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkyGridVisual
+  patternTextHead: I see a...
+  patternText: {fileID: 1750668044}
+--- !u!114 &1005997316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005997313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969f7f459bca59db96a0b182a9efa3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkyGrid
+  gridSize: {x: 10, y: 10}
+  cellSize: {x: 1, y: 1}
+  cellVisualObject: {fileID: 1165363105251223945, guid: 13175b8e6c44374b7bda4eea00fc13fd, type: 3}
+  validationPattern: {fileID: 11400000, guid: 96817d85b6b072a4f9ae294b0bd6d4b3, type: 2}
 --- !u!4 &1023370474 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4822019616163538950, guid: 6410a069d404bc243806c15967489ba0, type: 3}
@@ -1721,6 +1784,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0924c21f09130a04f8d001dac284dce6, type: 2}
   skyGrids:
   - {fileID: 1120059781}
+  - {fileID: 1109394522}
+  - {fileID: 1005997316}
   totalRoundCount: 5
   endPanel: {fileID: 1136255910}
 --- !u!114 &1033121998
@@ -1912,6 +1977,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107074874}
   m_CullTransparentMesh: 1
+--- !u!1 &1109394519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109394520}
+  - component: {fileID: 1109394522}
+  - component: {fileID: 1109394521}
+  m_Layer: 0
+  m_Name: SkyGrid2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1109394520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109394519}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.5, y: -2.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1459370487}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1109394521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109394519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 706c4f7811f4e2287ab7ec91ff65edc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkyGridVisual
+  patternTextHead: I see a...
+  patternText: {fileID: 1750668044}
+--- !u!114 &1109394522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109394519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1969f7f459bca59db96a0b182a9efa3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkyGrid
+  gridSize: {x: 10, y: 10}
+  cellSize: {x: 1, y: 1}
+  cellVisualObject: {fileID: 1165363105251223945, guid: 13175b8e6c44374b7bda4eea00fc13fd, type: 3}
+  validationPattern: {fileID: 11400000, guid: 96817d85b6b072a4f9ae294b0bd6d4b3, type: 2}
 --- !u!1 &1120059780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,7 +2052,7 @@ GameObject:
   - component: {fileID: 1120059781}
   - component: {fileID: 1120059783}
   m_Layer: 0
-  m_Name: SkyGrid
+  m_Name: SkyGrid1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1943,7 +2071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkyGrid
   gridSize: {x: 10, y: 10}
-  cellSize: {x: 1.2, y: 1.2}
+  cellSize: {x: 1, y: 1}
   cellVisualObject: {fileID: 1165363105251223945, guid: 13175b8e6c44374b7bda4eea00fc13fd, type: 3}
   validationPattern: {fileID: 11400000, guid: 96817d85b6b072a4f9ae294b0bd6d4b3, type: 2}
 --- !u!4 &1120059782
@@ -1955,11 +2083,11 @@ Transform:
   m_GameObject: {fileID: 1120059780}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: -5, z: 0}
+  m_LocalPosition: {x: -15.5, y: -2.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1572792118}
+  m_Father: {fileID: 1459370487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1120059783
 MonoBehaviour:
@@ -2208,11 +2336,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: 4bd912c2dfc4ac9458aa40605a06f370, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.279682
+      value: 10.96
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: 4bd912c2dfc4ac9458aa40605a06f370, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.5920033
+      value: -4.49
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: 4bd912c2dfc4ac9458aa40605a06f370, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2533,6 +2661,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382147891}
   m_CullTransparentMesh: 1
+--- !u!1 &1459370486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459370487}
+  m_Layer: 0
+  m_Name: SkyGrids
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1459370487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459370486}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1120059782}
+  - {fileID: 1109394520}
+  - {fileID: 1005997314}
+  m_Father: {fileID: 1572792118}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1510972968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7841917492422321614, guid: dcf98a03952bddb45a76ac9536fb5f9d, type: 3}
@@ -2560,11 +2722,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: 4613fb75a7367d2459d3c21658f5751a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.999009
+      value: -9.91
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: 4613fb75a7367d2459d3c21658f5751a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.5652432
+      value: -4.85
       objectReference: {fileID: 0}
     - target: {fileID: 4905673404215490663, guid: 4613fb75a7367d2459d3c21658f5751a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2641,7 +2803,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1899750669}
-  - {fileID: 1120059782}
+  - {fileID: 1459370487}
   - {fileID: 1943919267}
   - {fileID: 534896598}
   m_Father: {fileID: 0}
@@ -2975,11 +3137,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4822019616163538950, guid: 6410a069d404bc243806c15967489ba0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.01
+      value: -2.72
       objectReference: {fileID: 0}
     - target: {fileID: 4822019616163538950, guid: 6410a069d404bc243806c15967489ba0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.26
+      value: -5.24
       objectReference: {fileID: 0}
     - target: {fileID: 4822019616163538950, guid: 6410a069d404bc243806c15967489ba0, type: 3}
       propertyPath: m_LocalPosition.z

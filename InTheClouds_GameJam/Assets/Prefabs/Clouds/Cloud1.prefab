@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5457230233444185960, guid: 815a7c72a6beacf4d9250efe4cc164d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 815a7c72a6beacf4d9250efe4cc164d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -238,7 +238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2770870988008902375, guid: ff0605262a33cde74aa9febdeeef620a, type: 3}
       propertyPath: m_Name
-      value: Cloud9
+      value: Cloud1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
