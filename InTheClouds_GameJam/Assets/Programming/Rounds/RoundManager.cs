@@ -15,6 +15,8 @@ public class RoundManager : MonoBehaviour
     [SerializeField] private int totalRoundCount;
     private int currentRoundCount = 0;
 
+    [SerializeField] private GameObject endPanel;
+
     void OnEnable()
     {
         scoreManager.ScoringEnded += RoundEnd;
@@ -33,9 +35,12 @@ public class RoundManager : MonoBehaviour
 
     public void RoundEnd()
     {
-        currentRoundCount++;
-        roundVisuals.UpdateRoundCount(currentRoundCount, totalRoundCount);
-        UpdateGrids();
+        if (currentRoundCount == totalRoundCount) endPanel.SetActive(true);
+        else {
+            currentRoundCount++;
+            roundVisuals.UpdateRoundCount(currentRoundCount, totalRoundCount);
+            UpdateGrids();
+        }
     }
     
     private void UpdateGrids()
