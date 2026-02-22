@@ -11,8 +11,7 @@ public class ScoreManager : MonoBehaviour
 
     [Header("Scoring")]
     [SerializeField] private int totalScore;
-    [SerializeField] private int correctPoints;
-    [SerializeField] private int incorrectPoints;
+    [SerializeField] private AnimationCurve scoreCurve;
 
     public event Action ScoringEnded;
 
@@ -46,9 +45,9 @@ public class ScoreManager : MonoBehaviour
         ScoringEnded?.Invoke();
     }
 
-    private void CalculatePoints(int _correct, int _incorrect)
+    private void CalculatePoints(float _correct, float _incorrect)
     {
-        int _calculatedScore = (_correct * correctPoints) - (_incorrect * incorrectPoints);
-        totalScore += Mathf.Max(0, _calculatedScore);
+        float _accuracy = _correct / (_correct + _incorrect);
+        totalScore += Mathf.Max(0, Mathf.CeilToInt(scoreCurve.Evaluate(_accuracy)));
     }
 }

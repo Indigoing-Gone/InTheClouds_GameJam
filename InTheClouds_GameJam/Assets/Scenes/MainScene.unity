@@ -3514,8 +3514,48 @@ MonoBehaviour:
   - {fileID: 1005997316}
   buttons: {fileID: 392788522}
   totalScore: 0
-  correctPoints: 2
-  incorrectPoints: 1
+  scoreCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.33
+      value: 0
+      inSlope: 0
+      outSlope: -9.438371
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.20247151
+    - serializedVersion: 3
+      time: 0.9
+      value: 100
+      inSlope: 269.69363
+      outSlope: 269.69363
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.12008413
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.97
+      value: 150
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1899750667
 GameObject:
   m_ObjectHideFlags: 0
