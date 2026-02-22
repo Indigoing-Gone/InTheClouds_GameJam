@@ -1,12 +1,32 @@
-using System.Linq;
 using UnityEngine;
 
 public class CellData
 {
-    public Vector2 cellCenter;
-    public SkyGridCellVisual cellVisual;
-    public bool cloudDetected;
-    public bool cloudIntended;
+    private Vector2 cellCenter;
+    private SkyGridCellVisual cellVisual;
+    private bool cloudDetected;
+    private bool cloudIntended;
+
+    public Vector2 CellCenter { get => cellCenter; }
+    public bool CloudDetected
+    {
+        get => cloudDetected;
+        set
+        {
+            cloudDetected = value;
+            cellVisual.UpdateOverlayVisual(cloudDetected);
+        }
+    }
+    public bool CloudIntended
+    {
+        get => cloudIntended;
+        set
+        {
+            cloudIntended = value;
+            cellVisual.UpdatePatternVisual(cloudIntended);
+        }
+    }
+
 
     public CellData(Vector2 _cellCenter, SkyGridCellVisual _cellVisual, Vector2 _cellSize)
     {
@@ -74,18 +94,18 @@ public class SkyGrid : MonoBehaviour
         {
             for (int y = 0; y < gridSize.y; y++)
             {
-                RaycastHit2D _hit = Physics2D.Raycast(skyGrid[x, y].cellCenter, Vector2.zero, 20.0f);
+                RaycastHit2D _hit = Physics2D.Raycast(skyGrid[x, y].CellCenter, Vector2.zero, 20.0f);
 
                 if(!_hit)
                 {
-                    skyGrid[x, y].cloudDetected = false;
+                    skyGrid[x, y].CloudDetected = false;
                     continue;
                 }
 
                 _hit.transform.TryGetComponent<Cloud>(out Cloud _foundCloud);
                 if(_foundCloud == null) return;
 
-                skyGrid[x, y].cloudDetected = true;
+                skyGrid[x, y].CloudDetected = true;
             }
         }
     }
@@ -94,7 +114,7 @@ public class SkyGrid : MonoBehaviour
     {
         for (int x = 0; x < gridSize.x; x++)
             for (int y = 0; y < gridSize.y; y++)
-                skyGrid[x, y].cloudIntended = false;
+                skyGrid[x, y].CloudIntended = false;
 
         if(ValidationPattern == null) return;
 
@@ -102,7 +122,7 @@ public class SkyGrid : MonoBehaviour
         {
             
             Vector2Int _cloudPosition = ValidationPattern.IntendedCloudPositions[i];
-            skyGrid[_cloudPosition.x, _cloudPosition.y].cloudIntended = true;
+            skyGrid[_cloudPosition.x, _cloudPosition.y].CloudIntended = true;
         }
     }
 
@@ -114,8 +134,8 @@ public class SkyGrid : MonoBehaviour
         {
             for (int y = 0; y < gridSize.y; y++)
             {
-                if(!skyGrid[x, y].cloudDetected && !skyGrid[x, y].cloudIntended) continue;
-                else if(skyGrid[x, y].cloudDetected == skyGrid[x, y].cloudIntended) correct++;
+                if(!skyGrid[x, y].CloudDetected && !skyGrid[x, y].CloudIntended) continue;
+                else if(skyGrid[x, y].CloudDetected == skyGrid[x, y].CloudIntended) correct++;
                 else incorrect++;
             }
         }
@@ -146,9 +166,9 @@ public class SkyGrid : MonoBehaviour
                 if(Application.isPlaying)
                 {
                     Gizmos.color = 
-                        skyGrid[x, y].cloudDetected 
+                        skyGrid[x, y].CloudDetected 
                         ? Color.green : 
-                        skyGrid[x, y].cloudIntended
+                        skyGrid[x, y].CloudIntended
                         ? Color.blue
                         : Color.black;
                 }
