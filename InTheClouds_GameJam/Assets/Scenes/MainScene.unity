@@ -1316,7 +1316,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0924c21f09130a04f8d001dac284dce6, type: 2}
   skyGrids:
   - {fileID: 1120059781}
-  totalRoundCount: 3
+  totalRoundCount: 5
   endPanel: {fileID: 1136255910}
 --- !u!114 &1033121998
 MonoBehaviour:
