@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(ScoreVisuals))]
@@ -12,6 +13,7 @@ public class ScoreManager : MonoBehaviour
     [Header("Scoring")]
     [SerializeField] private int totalScore;
     [SerializeField] private AnimationCurve scoreCurve;
+    private bool currentlyScoring;
 
     public event Action ScoringEnded;
 
@@ -34,23 +36,40 @@ public class ScoreManager : MonoBehaviour
 
     private void ScoreGrids()
     {
-        int _correct, _incorrect;
+        if(currentlyScoring) return;
+        StartCoroutine(ScoreGridsCoroutine());
+    }
+
+    private IEnumerator ScoreGridsCoroutine()
+    {
+        currentlyScoring = true;
+
+        int _correct, _incorrect, _accuracy, _addedScore;
         for (int i = 0; i < skyGrids.Length; i++)
         {
             (_correct, _incorrect) = skyGrids[i].ValidateSkyGrid();
-            int _addedScore = CalculatePoints(_correct, _incorrect);
-            scoreVisuals.GenerateScorePopup(skyGrids[i].transform.position, _addedScore.ToString());
+            (_accuracy, _addedScore) = CalculatePoints(_correct, _incorrect);
+
+            scoreVisuals.GenerateScorePopup(skyGrids[i].transform.position, $"{_accuracy}%");
+            yield return new WaitForSeconds(0.5f);
+
+            scoreVisuals.GenerateScorePopup(skyGrids[i].transform.position, $"+{_addedScore}");
             scoreVisuals.UpdateTotalScore(totalScore);
+
+            yield return new WaitForSeconds(0.7f);
         }
 
+        yield return new WaitForSeconds(1.0f);
+
         ScoringEnded?.Invoke();
+        currentlyScoring = false;
     }
 
-    private int CalculatePoints(float _correct, float _incorrect)
+    private (int, int) CalculatePoints(float _correct, float _incorrect)
     {
         float _accuracy = _correct / (_correct + _incorrect);
         int _addedScore = Mathf.Max(0, Mathf.CeilToInt(scoreCurve.Evaluate(_accuracy)));
         totalScore += _addedScore;
-        return _addedScore;
+        return (Mathf.CeilToInt(_accuracy * 100), _addedScore);
     }
 }
