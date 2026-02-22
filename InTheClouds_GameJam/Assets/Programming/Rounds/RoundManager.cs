@@ -61,6 +61,8 @@ public class RoundManager : MonoBehaviour
 
     private void UpdateClouds()
     {
+        foreach(Cloud _cloud in currentClouds) Destroy(_cloud.gameObject);
+
         currentClouds.Clear();
         
         for (int i = 0; i < cloudSets.Length; i++)

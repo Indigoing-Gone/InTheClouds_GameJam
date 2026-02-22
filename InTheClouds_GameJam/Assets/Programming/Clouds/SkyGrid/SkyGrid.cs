@@ -113,7 +113,10 @@ public class SkyGrid : MonoBehaviour
 
     private Vector3 GetScaledGridPosition(int _gridX, int _gridY)
     {
-        return Vector3.Scale(new(_gridX, _gridY), cellSize);
+        return new Vector3(
+            (_gridX - (gridSize.x - 1) * 0.5f) * cellSize.x,
+            (_gridY - (gridSize.y - 1) * 0.5f) * cellSize.y
+        );
     }
 
     
