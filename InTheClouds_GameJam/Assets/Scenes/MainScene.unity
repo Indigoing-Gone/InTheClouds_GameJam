@@ -1380,6 +1380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkyGrid
   gridSize: {x: 10, y: 10}
   cellSize: {x: 1.2, y: 1.2}
+  cellVisualObject: {fileID: 1165363105251223945, guid: 13175b8e6c44374b7bda4eea00fc13fd, type: 3}
   validationPattern: {fileID: 0}
 --- !u!4 &1120059782
 Transform:
