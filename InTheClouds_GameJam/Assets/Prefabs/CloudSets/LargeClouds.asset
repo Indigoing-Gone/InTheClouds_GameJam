@@ -12,14 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6e75d48681bb0e79046a55602201ce, type: 3}
   m_Name: LargeClouds
   m_EditorClassIdentifier: Assembly-CSharp::CloudSet
-  clouds:
-  - {fileID: 2776651393985370481, guid: eb9d3347a9d8f3ebbb580536897261f7, type: 3}
-  - {fileID: 2776651393985370481, guid: dd53f0e66908a14d5aa1817f50646b26, type: 3}
-  - {fileID: 2776651393985370481, guid: 1e92eada4af960cb4893f3bd6e14abc5, type: 3}
-  - {fileID: 2776651393985370481, guid: 9acd804eeb384cb4f8d30ab9d68e53f7, type: 3}
-  - {fileID: 2776651393985370481, guid: 8d9f94818660aa64db90eeaf1b644557, type: 3}
-  - {fileID: 2776651393985370481, guid: b6f9748139135f345993afef2fa482f4, type: 3}
-  - {fileID: 2776651393985370481, guid: 5a7cd70eeb435f75eabdd72932820ce8, type: 3}
-  - {fileID: 2776651393985370481, guid: b5ab14d9de29c5d208b2dc66e299feb1, type: 3}
-  - {fileID: 5696567731823732501, guid: 4a20dc016ab0fb227afc90409152ef29, type: 3}
+  clouds: []
   AmountToSelect: 4
